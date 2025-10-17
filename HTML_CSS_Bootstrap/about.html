@@ -3,66 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>О нас - EnicKsBank</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body { padding-top: 56px; }
-    footer { background-color: #f8f9fa; padding: 20px 0; text-align: center; margin-top: 50px; }
-    .avatar { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; }
-  </style>
+  <title>О нас — EnicKsBank</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-
-  <!-- Навигация -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">EnicKsBank</a>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="bi bi-bank"></i> EnicKsBank</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">О нас</a></li>
-          <li class="nav-item"><a class="nav-link" href="products.html">Услуги</a></li>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i> Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html"><i class="bi bi-cash-coin"></i> Услуги</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html"><i class="bi bi-people"></i> О нас</a></li>
         </ul>
       </div>
     </div>
   </nav>
+</header>
 
-  <!-- Контент -->
-  <section class="container my-5">
-    <h1 class="text-center mb-4">О компании EnicKsBank</h1>
-    <p class="lead text-center">Мы — современный банк, который объединяет технологии и заботу о клиентах.  
-      Наша миссия — помогать людям достигать финансовой независимости и уверенности в будущем.</p>
+<main class="container my-4">
+  <h1>О EnicKsBank</h1>
+  <p>EnicKsBank работает с 2001 года и является одним из лидеров финансового сектора. Мы предоставляем нашим клиентам прозрачные и выгодные условия по кредитам, вкладам и инвестициям.</p>
 
-    <h3 class="text-center mt-5 mb-4">Наша команда</h3>
-    <div class="row justify-content-center text-center">
-      <div class="col-md-4 mb-4">
-        <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Сотрудник" class="avatar mb-3 shadow">
-        <h5>Власов Дмитрий</h5>
-        <p class="text-muted">Генеральный директор</p>
-      </div>
-      <div class="col-md-4 mb-4">
-        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Сотрудник" class="avatar mb-3 shadow">
-        <h5>Брагин Константин</h5>
-        <p class="text-muted">Директор по развитию</p>
-      </div>
-      <div class="col-md-4 mb-4">
-        <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Сотрудник" class="avatar mb-3 shadow">
-        <h5>Власова Дарья</h5>
-        <p class="text-muted">Руководитель клиентского отдела</p>
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="card shadow rounded my-3">
+        <div class="card-body">
+          <img src="assets/img/p1.jpeg" class="avatar">
+          <div class="avatar-post"><i class="bi bi-person-badge"></i> Генеральный директор</div>
+          <div class="avatar-text">Иван Петров</div>
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- Футер -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 EnicKsBank. Все права защищены.</p>
+    <div class="col-md-4">
+      <div class="card shadow rounded my-3">
+        <div class="card-body">
+          <img src="assets/img/p2.jpeg" class="avatar">
+          <div class="avatar-post"><i class="bi bi-currency-dollar"></i> Финансовый директор</div>
+          <div class="avatar-text">Мария Иванова</div>
+        </div>
+      </div>
     </div>
-  </footer>
+    <div class="col-md-4">
+      <div class="card shadow rounded my-3">
+        <div class="card-body">
+          <img src="assets/img/p3.jpeg" class="avatar">
+          <div class="avatar-post"><i class="bi bi-bar-chart"></i> Руководитель отдела инвестиций</div>
+          <div class="avatar-text">Алексей Смирнов</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="text-center py-3 bg-light">
+  <p>&copy; 2025 EnicKsBank</p>
+</footer>
 </body>
 </html>
