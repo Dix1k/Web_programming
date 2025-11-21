@@ -1,6 +1,5 @@
 <template>
   <div class="row">
-    <!-- Левая колонка: список заметок -->
     <div class="col-12 col-md-4 mb-3">
       <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
@@ -37,14 +36,12 @@
         </ul>
       </div>
 
-      <!-- Сохранение / Очистка -->
       <div class="mt-3 d-flex justify-content-between">
         <button class="btn btn-outline-secondary" @click="exportNotes">Экспорт</button>
         <button class="btn btn-outline-danger" @click="confirmClearAll" :disabled="notes.length===0">Очистить всё</button>
       </div>
     </div>
 
-    <!-- Правая колонка: редактор выбранной заметки -->
     <div class="col-12 col-md-8">
       <div v-if="currentNote" class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
@@ -102,7 +99,7 @@ import Swal from 'sweetalert2'
 
 const STORAGE_KEY = 'vue_todo_notes_v1'
 
-// Загрузить из localStorage или начальные данные
+
 function loadNotes() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
@@ -110,7 +107,7 @@ function loadNotes() {
   } catch (e) {
     console.warn('Не удалось прочитать заметки из localStorage', e)
   }
-  // начальные данные
+
   return [
     {
       id: Date.now(),
@@ -125,14 +122,12 @@ function loadNotes() {
 
 const notes = reactive(loadNotes())
 
-// текущая выбранная заметка индекс
 const currentIndex = ref(notes.length ? 0 : -1)
 const currentNote = computed(() => (currentIndex.value >= 0 ? notes[currentIndex.value] : null))
 
 watch(
   () => notes,
   () => {
-    // Никогда не сериализуем реактивные прокси напрямую — клонируем
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(JSON.parse(JSON.stringify(notes))))
     } catch (e) {
@@ -141,11 +136,6 @@ watch(
   },
   { deep: true }
 )
-
-function saveNotes() {
-  // триггерим запись через watch (notes уже реактивен)
-  // просто убедимся, что localStorage обновился (watch делает это)
-}
 
 function createNote() {
   const newNote = {
@@ -217,7 +207,6 @@ function confirmClearAll() {
   })
 }
 
-// todo операции
 const newTodoText = ref('')
 
 function addTodo() {
@@ -239,7 +228,6 @@ function deleteTodo(tIndex) {
   saveNotes()
 }
 
-// Экспорт заметок (скачать json)
 function exportNotes() {
   const blob = new Blob([JSON.stringify(JSON.parse(JSON.stringify(notes)), null, 2)], { type: 'application/json' })
   const url = URL.createObjectURL(blob)

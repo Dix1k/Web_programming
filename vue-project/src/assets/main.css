@@ -1,8 +1,6 @@
-/* Подключаем Bootstrap и Bootstrap Icons (положите папки bootstrap и bootstrap-icons в src/assets как в методичке) */
 @import "./bootstrap/css/bootstrap.css";
 @import "./bootstrap-icons/bootstrap-icons.css";
 
-/* Ваши дополнительные стили */
 body {
   padding-top: 0;
   background: #f8f9fa;

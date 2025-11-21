@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-/* Импорт компонентов */
 import TodoView from '@/views/Todo.vue'
 import AboutView from '@/views/About.vue'
 import RateView from '@/views/Rate.vue'

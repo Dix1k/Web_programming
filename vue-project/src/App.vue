@@ -26,10 +26,10 @@ import { RouterView } from 'vue-router'
               <router-link class="nav-link" to="/"><i class="bi-house"></i> Главная</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/rate"><i class="bi-star"></i> Оценить</router-link>
+              <router-link class="nav-link" to="/about"><i class="bi-person-circle"></i> Об авторе</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/about"><i class="bi-person-circle"></i> Об авторе</router-link>
+              <router-link class="nav-link" to="/rate"><i class="bi-star"></i> Оценить</router-link>
             </li>
           </ul>
         </div>
@@ -49,7 +49,3 @@ import { RouterView } from 'vue-router'
 <script>
 export default {}
 </script>
-
-<style scoped>
-/* Небольшие локальные стили (опционально) */
-</style>

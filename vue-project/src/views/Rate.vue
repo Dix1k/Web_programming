@@ -2,13 +2,25 @@
   <div class="card p-3">
     <h4>Оцените приложение</h4>
 
-    <div class="my-3">
+    <div class="my-3 text-center">
       <div class="fs-3">
-        <span v-for="n in 5" :key="n" class="me-2" style="cursor:pointer" @click="setRating(n)">
+        <span
+          v-for="n in 5"
+          :key="n"
+          class="me-2"
+          style="cursor:pointer"
+          @click="setRating(n)"
+        >
           <i :class="n <= rating ? 'bi-star-fill' : 'bi-star'"></i>
         </span>
       </div>
-      <div class="mt-2">
+
+      <!-- Подпись под звёздами -->
+      <div v-if="rating" class="mt-2 fs-5 text-secondary">
+        {{ ratingLabel }}
+      </div>
+
+      <div class="mt-3">
         <button class="btn btn-sm btn-primary me-2" @click="submitRating">Отправить оценку</button>
         <button class="btn btn-sm btn-outline-secondary" @click="clearRating">Сброс</button>
       </div>
@@ -21,10 +33,22 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const rating = ref(0)
 const ratingMessage = ref('')
+
+// Словарь подписей
+const labels = {
+  1: 'Плохо',
+  2: 'Удовлетворительно',
+  3: 'Нормально',
+  4: 'Хорошо',
+  5: 'Отлично'
+}
+
+// Автоматически выбираем подпись по оценке
+const ratingLabel = computed(() => labels[rating.value] || '')
 
 function setRating(n) {
   rating.value = n
@@ -35,24 +59,18 @@ function submitRating() {
     ratingMessage.value = 'Пожалуйста, выберите количество звёзд.'
     return
   }
-  ratingMessage.value = `Спасибо! Вы поставили ${rating.value} ${pluralizeStars(rating.value)}.`
+  ratingMessage.value = `Спасибо! Ваша оценка: ${rating.value} ⭐ (${labels[rating.value]}).`
 }
 
 function clearRating() {
   rating.value = 0
   ratingMessage.value = ''
 }
-
-function pluralizeStars(n) {
-  if (n % 10 === 1 && n % 100 !== 11) return 'звезду'
-  if (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)) return 'звезды'
-  return 'звёзд'
-}
 </script>
 
 <style scoped>
 i {
   font-size: 1.8rem;
-  color: #f2c10f;
+  color: #a7b40f; /* как на вашей картинке */
 }
 </style>
