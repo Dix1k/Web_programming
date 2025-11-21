@@ -1,47 +1,55 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Редактор заметок</a>
 
-    <div class="wrapper">
-      <HelloWorld msg="У тебя всё получилось!" />
-    </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <router-link class="nav-link" to="/"><i class="bi-house"></i> Главная</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/rate"><i class="bi-star"></i> Оценить</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/about"><i class="bi-person-circle"></i> Об авторе</router-link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <main>
-    <TheWelcome />
+  <main class="container my-4">
+    <RouterView />
   </main>
+
+  <footer class="text-center py-3">
+    <small>Лабораторная работа — Редактор заметок</small>
+  </footer>
 </template>
 
+<script>
+export default {}
+</script>
+
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
+/* Небольшие локальные стили (опционально) */
 </style>

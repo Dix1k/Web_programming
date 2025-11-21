@@ -1,6 +1,10 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router'
 
-createApp(App).mount('#app')
+import './assets/main.css' // подключаем bootstrap через main.css
+
+// Подключаем bootstrap JS (для collapse и т.д.)
+import 'bootstrap/dist/js/bootstrap.bundle'
+
+createApp(App).use(router).mount('#app')
