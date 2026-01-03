@@ -1,0 +1,80 @@
+.carousel-item img {
+  width: 15500px;
+  height: 690px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(100);
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.avatar-post {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.avatar-text {
+  color: rgb(140, 140, 140);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(210, 210, 210);
+}
+
+.product-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.product-description {
+  font-size: 1.1rem;
+  color: rgb(60, 60, 60);
+  margin-top: 0.5rem;
+}
+
+.product-price {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(210, 210, 210);
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+.btn-table {
+  background-color: #ff9800;
+  color: #fff;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-table:hover {
+  background-color: #e68900;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
