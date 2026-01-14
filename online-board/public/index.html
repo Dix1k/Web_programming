@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiroBoard | Онлайн-доска для совместной работы</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-chalkboard logo-icon"></i>
+                <span class="logo-text">MiroBoard</span>
+            </div>
+            
+            <div class="board-info">
+                <span id="boardIdDisplay" title="Нажмите чтобы скопировать ID">ID: Загрузка...</span>
+            </div>
+            
+            <div class="user-controls">
+                <button class="btn btn-outline" id="newBoardBtn" title="Новая доска (Ctrl+N)">
+                    <i class="fas fa-plus"></i> Новая
+                </button>
+                <button class="btn btn-outline" id="saveBtn" title="Сохранить доску (Ctrl+S)">
+                    <i class="fas fa-save"></i> Сохранить
+                </button>
+                <button class="btn btn-outline" id="loadBtn" title="Загрузить доску">
+                    <i class="fas fa-folder-open"></i> Загрузить
+                </button>
+                <button class="btn btn-outline" id="clearBtn" title="Очистить доску">
+                    <i class="fas fa-trash"></i> Очистить
+                </button>
+                <button class="btn btn-primary" id="shareBtn" title="Поделиться доской">
+                    <i class="fas fa-share-alt"></i> Поделиться
+                </button>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <div class="toolbar">
+                <div class="tool active" id="selectTool" title="Выбрать (V)">
+                    <i class="fas fa-mouse-pointer tool-icon"></i>
+                    <span class="tool-shortcut">V</span>
+                </div>
+                <div class="tool" id="rectangleTool" title="Прямоугольник (R)">
+                    <i class="far fa-square tool-icon"></i>
+                    <span class="tool-shortcut">R</span>
+                </div>
+                <div class="tool" id="circleTool" title="Круг (C)">
+                    <i class="far fa-circle tool-icon"></i>
+                    <span class="tool-shortcut">C</span>
+                </div>
+                <div class="tool" id="textTool" title="Текст (T)">
+                    <i class="fas fa-font tool-icon"></i>
+                    <span class="tool-shortcut">T</span>
+                </div>
+                <div class="tool" id="lineTool" title="Линия (L)">
+                    <i class="fas fa-slash tool-icon"></i>
+                    <span class="tool-shortcut">L</span>
+                </div>
+                <div class="tool" id="arrowTool" title="Стрелка (A)">
+                    <i class="fas fa-arrow-right tool-icon"></i>
+                    <span class="tool-shortcut">A</span>
+                </div>
+                <div class="tool" id="deleteTool" title="Удалить (Del)">
+                    <i class="fas fa-trash tool-icon"></i>
+                    <span class="tool-shortcut">Del</span>
+                </div>
+            </div>
+
+            <div class="canvas-container" id="canvasContainer">
+                <div id="board-canvas">
+                </div>
+                <div class="instructions">
+                    <div class="instructions-header">
+                        <i class="fas fa-info-circle"></i> Инструкция по использованию
+                    </div>
+                    <div>Используйте инструменты слева для добавления фигур и текста. Перетаскивайте элементы мышью. Выделите элемент и используйте панель справа для изменения свойств.</div>
+                    <div class="instructions-list">
+                        <div class="instruction-item"><span class="key">V</span> - Выбрать</div>
+                        <div class="instruction-item"><span class="key">R</span> - Прямоугольник</div>
+                        <div class="instruction-item"><span class="key">C</span> - Круг</div>
+                        <div class="instruction-item"><span class="key">T</span> - Текст</div>
+                        <div class="instruction-item"><span class="key">L</span> - Линия</div>
+                        <div class="instruction-item"><span class="key">A</span> - Стрелка</div>
+                        <div class="instruction-item"><span class="key">Del</span> - Удалить</div>
+                        <div class="instruction-item"><span class="key">Ctrl+S</span> - Сохранить</div>
+                        <div class="instruction-item"><span class="key">Ctrl+N</span> - Новая доска</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="properties-panel">
+                <div>
+                    <div class="panel-title">Цвет заливки</div>
+                    <div class="color-palette" id="fillColors">
+                        <div class="color-option active" style="background-color: transparent;" data-color="transparent"></div>
+                        <div class="color-option" style="background-color: #FF6B6B;" data-color="#FF6B6B"></div>
+                        <div class="color-option" style="background-color: #4ECDC4;" data-color="#4ECDC4"></div>
+                        <div class="color-option" style="background-color: #FFD166;" data-color="#FFD166"></div>
+                        <div class="color-option" style="background-color: #4262FF;" data-color="#4262FF"></div>
+                        <div class="color-option" style="background-color: #9D4EDD;" data-color="#9D4EDD"></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="panel-title">Цвет границы</div>
+                    <div class="color-palette" id="borderColors">
+                        <div class="color-option active" style="background-color: #333;" data-color="#333"></div>
+                        <div class="color-option" style="background-color: #FF6B6B;" data-color="#FF6B6B"></div>
+                        <div class="color-option" style="background-color: #4ECDC4;" data-color="#4ECDC4"></div>
+                        <div class="color-option" style="background-color: #4262FF;" data-color="#4262FF"></div>
+                        <div class="color-option" style="background-color: #9D4EDD;" data-color="#9D4EDD"></div>
+                        <div class="color-option" style="background-color: #06D6A0;" data-color="#06D6A0"></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="panel-title">Толщина границы</div>
+                    <div class="slider-container">
+                        <input type="range" min="1" max="10" value="2" class="slider" id="borderWidth">
+                        <div class="value-display" id="borderWidthValue">2px</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="panel-title">Размер текста</div>
+                    <div class="slider-container">
+                        <input type="range" min="12" max="48" value="16" class="slider" id="fontSize">
+                        <div class="value-display" id="fontSizeValue">16px</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <button class="btn btn-outline" id="bringForwardBtn">
+                        <i class="fas fa-arrow-up"></i> На передний план
+                    </button>
+                    <button class="btn btn-outline" id="sendBackwardBtn">
+                        <i class="fas fa-arrow-down"></i> На задний план
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="loadModal">
+        <div class="modal-content">
+            <div class="modal-title">Загрузить доску</div>
+            <p>Выберите сохраненную доску из списка ниже:</p>
+            <div class="boards-list" id="boardsList">
+            </div>
+            <div class="modal-buttons">
+                <button class="btn btn-outline close-modal">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="shareModal">
+        <div class="modal-content">
+            <div class="modal-title">Поделиться доской</div>
+            <p>Отправьте эту ссылку другим пользователям, чтобы они могли получить доступ к вашей доске:</p>
+            <input type="text" class="modal-input" id="shareLinkInput" readonly>
+            <div class="modal-buttons">
+                <button class="btn btn-primary" id="copyLinkBtn">
+                    <i class="fas fa-copy"></i> Копировать ссылку
+                </button>
+                <button class="btn btn-outline close-modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    background: #fff;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    color: #4262FF;
+    font-size: 24px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #4262FF;
+}
+
+.board-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+#boardIdDisplay {
+    background: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-family: monospace;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#boardIdDisplay:hover {
+    background: #e0e0e0;
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #4262FF;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #3651d4;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #ddd;
+    color: #555;
+}
+
+.btn-outline:hover {
+    background: #f9f9f9;
+}
+
+.btn-success {
+    background: #06D6A0;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #05b586;
+}
+
+.btn-danger {
+    background: #FF6B6B;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #e05555;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.toolbar {
+    width: 64px;
+    background: #fff;
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    z-index: 5;
+}
+
+.tool {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #555;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.tool:hover {
+    background: #f5f5f5;
+}
+
+.tool.active {
+    background: #eef2ff;
+    color: #4262FF;
+}
+
+.tool-icon {
+    font-size: 20px;
+}
+
+.tool-shortcut {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    font-size: 9px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 1px 3px;
+}
+
+.properties-panel {
+    width: 240px;
+    background: #fff;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.05);
+    z-index: 5;
+    overflow-y: auto;
+}
+
+.panel-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.color-option {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option.active {
+    border-color: #333;
+    transform: scale(1.1);
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.slider {
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: #e0e0e0;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #4262FF;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #4262FF;
+    cursor: pointer;
+    border: none;
+}
+
+.value-display {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+.canvas-container {
+    flex: 1;
+    overflow: auto;
+    position: relative;
+    background: #f9f9f9;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+#board-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3000px;
+    height: 3000px;
+    background: transparent;
+}
+
+.shape {
+    position: absolute;
+    cursor: move;
+    user-select: none;
+}
+
+.shape.selected {
+    outline: 2px dashed #4262FF;
+    outline-offset: 2px;
+}
+
+.rectangle {
+    border: 2px solid;
+    border-radius: 4px;
+}
+
+.circle {
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+.text-box {
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    border: 1px dashed transparent;
+    resize: none;
+    overflow: hidden;
+    min-width: 100px;
+    min-height: 40px;
+}
+
+.text-box:focus {
+    border: 1px dashed #aaa;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.line {
+    position: absolute;
+    transform-origin: 0 0;
+}
+
+.arrow-svg {
+    pointer-events: all;
+    cursor: move;
+    outline: none;
+}
+
+.arrow-svg.selected {
+    outline: 2px dashed #4262FF !important;
+    outline-offset: 2px !important;
+}
+
+.arrow-svg line {
+    pointer-events: stroke;
+}
+
+.selection-box {
+    position: absolute;
+    border: 2px dashed #4262FF;
+    background: rgba(66, 98, 255, 0.05);
+}
+
+.instructions {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    max-width: 600px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.instructions-header {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #4262FF;
+}
+
+.instructions-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+.instruction-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+}
+
+.key {
+    background: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.boards-list {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 15px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
+
+.board-item {
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.board-item:hover {
+    background: #f9f9f9;
+}
+
+.board-item:last-child {
+    border-bottom: none;
+}
+
+.board-item-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.board-item-meta {
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .properties-panel {
+        display: none;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    .instructions {
+        font-size: 12px;
+        padding: 8px 16px;
+        max-width: 90%;
+    }
+    
+    .header {
+        padding: 10px 15px;
+    }
+    
+    .user-controls {
+        gap: 8px;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
