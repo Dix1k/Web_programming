@@ -1,6 +1,174 @@
 {
-  "3dd819df-0621-4e03-98db-a3c7af3af941": {
+  "b2e55014-1dae-485d-bd2b-45d6fd058f36": {
+    "elements": [
+      {
+        "id": 2,
+        "type": "arrow",
+        "x": 317,
+        "y": 121.4000015258789,
+        "width": 246,
+        "height": 15,
+        "color": "#4ECDC4",
+        "fillColor": "transparent",
+        "borderWidth": 2,
+        "fontSize": 16,
+        "content": "",
+        "zIndex": 0,
+        "endX": 411,
+        "endY": 312.4000015258789
+      },
+      {
+        "id": 3,
+        "type": "rectangle",
+        "x": 136,
+        "y": 149.39999961853027,
+        "width": 149,
+        "height": 96,
+        "color": "#333",
+        "fillColor": "#4ECDC4",
+        "borderWidth": "4",
+        "fontSize": 16,
+        "content": "",
+        "zIndex": 1,
+        "endX": null,
+        "endY": null
+      },
+      {
+        "id": 1,
+        "type": "rectangle",
+        "x": 312,
+        "y": 155.40000152587896,
+        "width": 197,
+        "height": 161,
+        "color": "#4ECDC4",
+        "fillColor": "#4ECDC4",
+        "borderWidth": 2,
+        "fontSize": "22",
+        "content": "",
+        "zIndex": 0,
+        "endX": null,
+        "endY": null
+      },
+      {
+        "id": 2,
+        "type": "rectangle",
+        "x": 308.3333333333333,
+        "y": 317.0000012715658,
+        "width": 69.99999999999994,
+        "height": 27.5,
+        "color": "#4ECDC4",
+        "fillColor": "#4ECDC4",
+        "borderWidth": 2,
+        "fontSize": "22",
+        "content": "",
+        "zIndex": 1,
+        "endX": null,
+        "endY": null
+      },
+      {
+        "id": 3,
+        "type": "rectangle",
+        "x": 434.99999999999994,
+        "y": 344.5000012715658,
+        "width": 51.66666666666663,
+        "height": 78.33333333333331,
+        "color": "#4ECDC4",
+        "fillColor": "#4ECDC4",
+        "borderWidth": 2,
+        "fontSize": "22",
+        "content": "",
+        "zIndex": 2,
+        "endX": null,
+        "endY": null
+      },
+      {
+        "id": 4,
+        "type": "rectangle",
+        "x": 134.99999999999997,
+        "y": 174.5000012715658,
+        "width": 48.33333333333334,
+        "height": 107.5,
+        "color": "#4ECDC4",
+        "fillColor": "#4ECDC4",
+        "borderWidth": 2,
+        "fontSize": "22",
+        "content": "",
+        "zIndex": 3,
+        "endX": null,
+        "endY": null
+      }
+    ],
+    "lastUpdated": "2026-01-15T10:23:04.749Z"
+  },
+  "5c5cef78-e00c-47cc-ab64-8604b8789cfe": {
     "elements": [],
-    "lastUpdated": "2026-01-14T07:28:58.758Z"
+    "lastUpdated": "2026-01-15T10:23:04.748Z"
+  },
+  "d66a0134-48e1-46bd-8c81-c1af13c420b2": {
+    "elements": [
+      {
+        "id": 1,
+        "type": "rectangle",
+        "x": 593,
+        "y": 153.4000015258789,
+        "width": 241,
+        "height": 143,
+        "color": "#333",
+        "fillColor": "#FF6B6B",
+        "borderWidth": "4",
+        "fontSize": 16,
+        "content": "",
+        "zIndex": 0,
+        "endX": null,
+        "endY": null
+      },
+      {
+        "id": 2,
+        "type": "text",
+        "x": 273,
+        "y": 249.4000015258789,
+        "width": 207,
+        "height": 62,
+        "color": "#4262FF",
+        "fillColor": "#4ECDC4",
+        "borderWidth": "5",
+        "fontSize": "22",
+        "content": "фцв",
+        "zIndex": 1
+      },
+      {
+        "id": 3,
+        "type": "line",
+        "x": 68,
+        "y": 231.4000015258789,
+        "width": 164,
+        "height": 11,
+        "color": "#FF6B6B",
+        "fillColor": "transparent",
+        "borderWidth": "5",
+        "fontSize": "22",
+        "content": "",
+        "zIndex": 2,
+        "endX": 200,
+        "endY": 255.4000015258789
+      },
+      {
+        "id": 4,
+        "type": "arrow",
+        "x": 830,
+        "y": 134.4000015258789,
+        "width": 166,
+        "height": 67,
+        "color": "#4ECDC4",
+        "fillColor": "transparent",
+        "borderWidth": "5",
+        "fontSize": "22",
+        "content": "",
+        "zIndex": -2,
+        "endX": 328,
+        "endY": 235.4000015258789
+      }
+    ],
+    "lastUpdated": "2026-01-15T10:23:04.749Z"
   }
 }

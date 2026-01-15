@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiroBoard | Онлайн-доска для совместной работы</title>
+    <title>MiroBoard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,14 +12,26 @@
         <header class="header">
             <div class="logo">
                 <i class="fas fa-chalkboard logo-icon"></i>
-                <span class="logo-text">MiroBoard</span>
+                <span class="logo-text">MiroBoard Live</span>
             </div>
             
             <div class="board-info">
                 <span id="boardIdDisplay" title="Нажмите чтобы скопировать ID">ID: Загрузка...</span>
+                <div class="users-online" id="usersOnline"></div>
             </div>
             
             <div class="user-controls">
+                <div class="zoom-controls">
+                    <button class="zoom-btn" id="zoomOutBtn" title="Уменьшить (Ctrl+-)">
+                        <i class="fas fa-search-minus"></i>
+                    </button>
+                    <button class="zoom-btn" id="zoomResetBtn" title="Сбросить масштаб (Ctrl+0)">
+                        <span id="zoomPercent">100%</span>
+                    </button>
+                    <button class="zoom-btn" id="zoomInBtn" title="Увеличить (Ctrl++)">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                </div>
                 <button class="btn btn-outline" id="newBoardBtn" title="Новая доска (Ctrl+N)">
                     <i class="fas fa-plus"></i> Новая
                 </button>
@@ -69,32 +81,14 @@
                     <span class="tool-shortcut">Del</span>
                 </div>
             </div>
-
+            
             <div class="canvas-container" id="canvasContainer">
-                <div id="board-canvas">
-                </div>
-                <div class="instructions">
-                    <div class="instructions-header">
-                        <i class="fas fa-info-circle"></i> Инструкция по использованию
-                    </div>
-                    <div>Используйте инструменты слева для добавления фигур и текста. Перетаскивайте элементы мышью. Выделите элемент и используйте панель справа для изменения свойств.</div>
-                    <div class="instructions-list">
-                        <div class="instruction-item"><span class="key">V</span> - Выбрать</div>
-                        <div class="instruction-item"><span class="key">R</span> - Прямоугольник</div>
-                        <div class="instruction-item"><span class="key">C</span> - Круг</div>
-                        <div class="instruction-item"><span class="key">T</span> - Текст</div>
-                        <div class="instruction-item"><span class="key">L</span> - Линия</div>
-                        <div class="instruction-item"><span class="key">A</span> - Стрелка</div>
-                        <div class="instruction-item"><span class="key">Del</span> - Удалить</div>
-                        <div class="instruction-item"><span class="key">Ctrl+S</span> - Сохранить</div>
-                        <div class="instruction-item"><span class="key">Ctrl+N</span> - Новая доска</div>
-                    </div>
-                </div>
+                <div id="board-canvas"></div>
             </div>
             
             <div class="properties-panel">
                 <div>
-                    <div class="panel-title">Цвет заливки</div>
+                    <div class="panel-title" id="fillColorTitle">Цвет заливки</div>
                     <div class="color-palette" id="fillColors">
                         <div class="color-option active" style="background-color: transparent;" data-color="transparent"></div>
                         <div class="color-option" style="background-color: #FF6B6B;" data-color="#FF6B6B"></div>
@@ -106,7 +100,7 @@
                 </div>
                 
                 <div>
-                    <div class="panel-title">Цвет границы</div>
+                    <div class="panel-title" id="borderColorTitle">Цвет границы</div>
                     <div class="color-palette" id="borderColors">
                         <div class="color-option active" style="background-color: #333;" data-color="#333"></div>
                         <div class="color-option" style="background-color: #FF6B6B;" data-color="#FF6B6B"></div>
@@ -149,8 +143,7 @@
         <div class="modal-content">
             <div class="modal-title">Загрузить доску</div>
             <p>Выберите сохраненную доску из списка ниже:</p>
-            <div class="boards-list" id="boardsList">
-            </div>
+            <div class="boards-list" id="boardsList"></div>
             <div class="modal-buttons">
                 <button class="btn btn-outline close-modal">Отмена</button>
             </div>
@@ -171,6 +164,7 @@
         </div>
     </div>
 
+    <script src="/socket.io/socket.io.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
