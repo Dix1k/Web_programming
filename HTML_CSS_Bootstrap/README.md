@@ -42,89 +42,61 @@
     - Или через контекстное меню "Открыть с помощью"
 
 ### Альтернативный способ (с локальным сервером)
-    Если вы используете VS Code:
-        - Установите расширение "Live Server"
-        - Нажмите правой кнопкой мыши на index.html
-        - Выберите "Open with Live Server"
+Если вы используете VS Code:
+- Установите расширение "Live Server"
+- Нажмите правой кнопкой мыши на index.html
+- Выберите "Open with Live Server"
 
-    Или используйте Python:
-        ```bash
-        python -m http.server 8000
-        - Затем откройте браузер по адресу: http://localhost:8000
+Или используйте Python:
+```bash
+python -m http.server 8000
+```
+- Затем откройте браузер по адресу: http://localhost:8000
 
 ---
 
 ## 📁 Структура проекта
-text
-HTML_CSS_Bootstrap/
-│
-├── 📄 index.html          # Главная страница
-├── 📄 about.html          # Страница "О нас"
-├── 📄 contacts.html       # Страница контактов
-├── 📄 catalog.html        # Страница каталога
-│
-├── 📁 css/                # Папка со стилями
-│   ├── 📄 style.css       # Основные стили
-│   └── 📄 responsive.css  # Дополнительные медиа-запросы
-│
-├── 📁 js/                 # Папка со скриптами
-│   └── 📄 main.js         # JavaScript файл
-│
-├── 📁 img/                # Папка с изображениями
-│   ├── 🖼️ logo.png
-│   ├── 🖼️ banner.jpg
-│   └── ...
-│
-└── 📁 bootstrap/          # Локальные файлы Bootstrap (опционально)
-    ├── 📄 bootstrap.min.css
-    └── 📄 bootstrap.bundle.min.js
+HTML_CSS_Bootstrap/  
+│  
+├── 📄 index.html                     # Главная страница  
+├── 📄 about.html                     # Страница "О нас"  
+├── 📄 products.html                  # Страница товаров  
+├── 📄 README.md                      # Документация проекта  
+│  
+├── 📁 assets/                        # Ресурсы проекта  
+│   ├── 📁 bootstrap/                 # Bootstrap файлы  
+│   │   ├── 📁 css/                   # Стили Bootstrap  
+│   │   └── 📁 js/                    # Скрипты Bootstrap  
+│   ├── 📁 bootstrap-icons/           # Иконки Bootstrap  
+│   │   └── 📁 fonts/                 # Шрифты  
+│   └── 📁 img/                        # Изображения
 
 ---
 
 ## 🎯 Цели проекта
-Изучить основы адаптивной верстки
 
-Освоить работу с Bootstrap сеткой
-
-Научиться кастомизировать Bootstrap компоненты
-
-Понять принципы mobile-first подхода
-
-Создать готовый шаблон для дальнейшего использования
+1. Изучить основы адаптивной верстки
+2. Освоить работу с Bootstrap сеткой
+3. Научиться кастомизировать Bootstrap компоненты
+4. Понять принципы mobile-first подхода
+5. Создать готовый шаблон для дальнейшего использования
 
 ---
 
 ## 📚 Используемые технологии
-Технология	Версия	Назначение
-HTML5	-	Структура страниц
-CSS3	-	Стилизация элементов
-Bootstrap	5.x	Фреймворк для адаптивной верстки
-JavaScript	ES6	Интерактивные элементы
-💡 Примеры кода
-Подключение Bootstrap:
 
-html
-<!-- CSS Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- JS Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-Адаптивная сетка:
-
-html
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-md-6 col-lg-4">
-      <!-- Контент колонки -->
-    </div>
-  </div>
-</div>
+| Технология | Версия | Назначение |
+| :--- | :--- | :--- |
+| **HTML5** | - | Структура страниц |
+| **CSS3** | - | Стилизация элементов |
+| **Bootstrap** | 5.x | Фреймворк для адаптивной верстки |
+| **JavaScript** | ES6 | Интерактивные элементы |
 
 ---
 
 ## 📞 Контакты
-Автор: Власов Дмитрий
-Группа: ПИНб-31
-GitHub: Dix1k
+*   **Автор:** Власов Дмитрий
+*   **Группа:** ПИНб-31
+*   **GitHub:** [Dix1k](https://github.com/Dix1k)
 
 <div align="center"> <sub>© 2025 Власов Дмитрий | Учебный проект по веб-программированию</sub> <br> <a href="https://github.com/Dix1k/Web_programming">Вернуться в корневой репозиторий</a> </div> ```
