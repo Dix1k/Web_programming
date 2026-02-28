@@ -7,7 +7,6 @@
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
 </div>
 
----
 
 ## 📋 Описание проекта
 
@@ -15,38 +14,37 @@
 
 **Автор:** Власов Дмитрий (ПИНб-31)
 
----
 
 ## 📁 Cтруктура проекта
-
+```
 Go+Echo/  
 │  
-### 📂 Бэкенд (Go)  
-├── 📄 server.go                     # Основной сервер на Go + Echo  
-├── 📄 go.mod                         # Модуль Go (зависимости)  
-├── 📄 go.sum                         # Контрольные суммы зависимостей  
+│📂 Бэкенд (Go)  
+├── 📄 server.go            # Основной сервер на Go + Echo  
+├── 📄 go.mod               # Модуль Go (зависимости)  
+├── 📄 go.sum               # Контрольные суммы зависимостей  
 │  
-### 📂 Фронтенд (Vue.js)  
-├── 📄 index.html                     # Главный HTML файл  
-├── 📄 package.json                    # Зависимости Node.js  
-├── 📄 package-lock.json                # Фиксация версий зависимостей  
-├── 📄 vite.config.js                   # Конфигурация Vite  
+│📂 Фронтенд (Vue.js)  
+├── 📄 index.html           # Главный HTML файл  
+├── 📄 package.json         # Зависимости Node.js  
+├── 📄 package-lock.json    # Фиксация версий зависимостей  
+├── 📄 vite.config.js       # Конфигурация Vite  
 │  
-├── 📁 src/                             # Исходный код Vue.js  
-│   ├── 📄 main.js                       # Точка входа Vue  
-│   ├── 📄 App.vue                        # Корневой компонент  
+├── 📁 src/                 # Исходный код Vue.js  
+│   ├── 📄 main.js          # Точка входа Vue  
+│   ├── 📄 App.vue          # Корневой компонент  
 │   │  
-│   ├── 📁 assets/                        # Ресурсы фронтенда  
-│   ├── 📁 router/                         # Маршрутизация Vue Router  
-│   └── 📁 views/                           # Компоненты страниц  
+│   ├── 📁 assets/          # Ресурсы фронтенда  
+│   ├── 📁 router/          # Маршрутизация Vue Router  
+│   └── 📁 views/           # Компоненты страниц  
 │  
-├── 📁 public/                           # Публичные статические файлы  
-│   ├── 📁 data/                              # Данные для приложения  
-│   ├── 📁 assets/                            # Общие ресурсы  
+├── 📁 public/              # Публичные статические файлы  
+│   ├── 📁 data/            # Данные для приложения  
+│   ├── 📁 assets/          # Общие ресурсы  
 │  
-└── 📁 node_modules/                      # Зависимости Node.js  
+└── 📁 node_modules/        # Зависимости Node.js  
+```
 
----
 
 ## 🚀 Установка и запуск
 
@@ -90,100 +88,6 @@ Go+Echo/
    ```
    Фронтенд запустится на `http://localhost:5173`
 
----
-
-## 📡 API Endpoints (Go + Echo)
-
-| Метод | Endpoint | Описание |
-| :--- | :--- | :--- |
-| GET | `/api/v1/health` | Проверка работы сервера |
-| GET | `/api/v1/users` | Получить пользователей |
-| GET | `/api/v1/users/:id` | Получить пользователя по ID |
-| POST | `/api/v1/users` | Создать нового пользователя |
-
----
-
-## 🖥️ Фронтенд (Vue.js + Vite)
-
-### Основные файлы Vue
-
-**src/main.js** - точка входа
-```javascript
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-
-createApp(App)
-  .use(router)
-  .mount('#app')
-```
-
-**src/App.vue** - корневой компонент
-```vue
-<template>
-  <div id="app">
-    <router-view />
-  </div>
-</template>
-
-<script>
-export default {
-  name: 'App'
-}
-</script>
-```
-
----
-
-## 📦 Зависимости
-
-### Go модули (go.mod)
-```
-module Go+Echo
-
-go 1.19
-
-require github.com/labstack/echo/v4 v4.10.0
-```
-
-### Node.js зависимости (package.json)
-```json
-{
-  "dependencies": {
-    "vue": "^3.3.0",
-    "vue-router": "^4.2.0"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^4.0.0",
-    "vite": "^4.3.0"
-  }
-}
-```
-
----
-
-## 🛠️ Конфигурационные файлы
-
-### vite.config.js
-```javascript
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-
-export default defineConfig({
-  plugins: [vue()],
-  server: {
-    port: 5173,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8080',
-        changeOrigin: true
-      }
-    }
-  }
-})
-```
-
----
 
 ## 🎯 Особенности проекта
 
@@ -193,7 +97,6 @@ export default defineConfig({
 - ✅ **Разделение ответственности**: четкое разделение бэкенда и фронтенда
 - ✅ **Горячая перезагрузка**: при разработке на Vue
 
----
 
 ## 📞 Контакты
 
