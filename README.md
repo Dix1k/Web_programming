@@ -2,9 +2,6 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=200&section=header&text=Web%20Programming&fontSize=50&fontAlignY=35&desc=Учебные%20проекты%20по%20веб-разработке&descAlignY=55&animation=twinkling" width="100%" alt="Header"/>
 </div>
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=4F9DFF&center=true&vCenter=true&width=435&lines=Портфолио+студента;Веб-технологии;HTML%2C+CSS%2C+Vue%2C+Go" alt="Typing SVG" />
-</p>
 
 ## 👨‍💻 О себе
 
@@ -42,7 +39,6 @@
 ## 📊 Статистика репозитория
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dix1k&repo=Web_programming&theme=transparent&border_color=4F9DFF&title_color=4F9DFF" alt="Repo Card" />
   <br>
   <img src="https://img.shields.io/github/languages/top/Dix1k/Web_programming?color=4F9DFF&style=flat-square" />
   <img src="https://img.shields.io/github/last-commit/Dix1k/Web_programming?color=4F9DFF&style=flat-square" />
