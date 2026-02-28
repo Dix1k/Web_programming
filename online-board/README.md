@@ -87,4 +87,4 @@ python -m http.server 3000
 
 ---
 
-<div align="center"> <sub>© 2025 Власов Дмитрий | Учебный проект по веб-программированию</sub> <br> <a href="https://github.com/Dix1k/Web_programming">⬆️ Вернуться в корневой репозиторий</a> </div>
+<div align="center"> <sub>© 2026 Власов Дмитрий | Учебный проект по веб-программированию</sub> <br> <a href="https://github.com/Dix1k/Web_programming">⬆️ Вернуться в корневой репозиторий</a> </div>
