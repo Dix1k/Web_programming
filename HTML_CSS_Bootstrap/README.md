@@ -99,4 +99,4 @@ HTML_CSS_Bootstrap/
 *   **Группа:** ПИНб-31
 *   **GitHub:** [Dix1k](https://github.com/Dix1k)
 
-<div align="center"> <sub>© 2025 Власов Дмитрий | Учебный проект по веб-программированию</sub> <br> <a href="https://github.com/Dix1k/Web_programming">Вернуться в корневой репозиторий</a> </div> ```
+<div align="center"> <sub>© 2025 Власов Дмитрий | Учебный проект по веб-программированию</sub> <br> <a href="https://github.com/Dix1k/Web_programming">Вернуться в корневой репозиторий</a> </div>
