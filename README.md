@@ -36,14 +36,6 @@
 *   **Backend:** Go (фреймворк Echo)
 *   **Инструменты:** Git
 
-## 📊 Статистика репозитория
-
-<div align="center">
-  <br>
-  <img src="https://img.shields.io/github/languages/top/Dix1k/Web_programming?color=4F9DFF&style=flat-square" />
-  <img src="https://img.shields.io/github/last-commit/Dix1k/Web_programming?color=4F9DFF&style=flat-square" />
-  <img src="https://img.shields.io/github/repo-size/Dix1k/Web_programming?color=4F9DFF&style=flat-square" />
-</div>
 
 ## 🚀 Быстрый старт
 
