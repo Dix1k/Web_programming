@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=200&section=header&text=Web%20Programming&fontSize=50&fontAlignY=35&desc=Учебные%20проекты%20по%20веб-разработке&descAlignY=55&animation=twinkling" width="100%" alt="Header"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=200&section=header&text=Web%20Programming&fontSize=50&fontAlignY=35&desc=ПИНб-31%20•%20Учебные%20проекты&descAlignY=55&animation=twinkling" width="100%" alt="Header"/>
 </div>
 
 
@@ -67,10 +67,9 @@
 
 ---
 
+⭐️ Если этот репозиторий помог вам в учебе или просто показался интересным, не забудьте поставить звезду!
+© 2025-2026 Власов Дмитрий (ПИНб-31)
+
 <div align="center">
-  <sub>⭐️ Если этот репозиторий помог вам в учебе, не забудьте поставить звезду!</sub>
-  <br>
-  <sub>© 2025-2026 Власов Дмитрий (ПИНб-31)</sub>
-  <br>
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=6&height=50&section=footer&text=Спасибо%20за%20визит!&fontSize=14&fontAlignY=70" width="100%" alt="Footer"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=150&section=footer&text=Продолжайте%20кодить&fontSize=30&fontAlignY=70&animation=twinkling" width="100%" alt="Footer"/>
 </div>
