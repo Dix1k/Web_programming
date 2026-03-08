@@ -8,15 +8,11 @@
   <img src="https://img.shields.io/badge/status-vue__project%201.0-blue?style=for-the-badge" alt="Status">
 </div>
 
-
 ## 📋 Описание проекта
 
 Одностраничное приложение (SPA), созданное с использованием фреймворка Vue.js и сборщика Vite. Проект демонстрирует современный подход к разработке веб-приложений с компонентной архитектурой.
 
-**Дата создания:** 21 ноября 2025  
-**Версия:** 1.0 (vue_project 1.0)  
 **Автор:** Власов Дмитрий (ПИНб-31)
-
 
 ## 📁 Реальная структура проекта
 
@@ -51,7 +47,6 @@ vue-project/
 └── 📄 README.md            # Документация проекта
 ```
 
-
 ## ✨ Возможности проекта
 
 - ✅ Современный Vue 3 с Composition API
@@ -60,59 +55,24 @@ vue-project/
 - ✅ Поддержка JavaScript ES6+
 - ✅ Оптимизированная структура для разработки
 
-
-## 🚀 Установка и запуск
-
-### Предварительные требования
-
-- Установленный Node.js (версия 16 или выше)
-- npm или yarn
-
-### Пошаговая инструкция
-
-1. **Клонируйте репозиторий:**
-   ```bash
-   git clone https://github.com/Dix1k/Web_programming.git
-   cd Web_programming/vue-project
-   ```
-
-2. **Перейдите в папку src и установите зависимости:**
-   ```bash
-   cd src
-   npm install
-   # или
-   yarn install
-   ```
-
-3. **Запустите сервер разработки:**
-   ```bash
-   npm run dev
-   # или
-   yarn dev
-   ```
-
-4. **Откройте приложение в браузере:**
-   ```
-   http://localhost:5173
-   ```
-
-### Сборка для продакшена
-
-```bash
-npm run build
-# или
-yarn build
-```
-
-Результат сборки появится в папке `dist`.
-
-
 ## 📞 Контакты
 
-*   **Автор:** Власов Дмитрий  
-*   **Группа:** ПИНб-31  
+**Автор:** Власов Дмитрий  
+**Группа:** ПИНб-31
 *   **GitHub:** [Dix1k](https://github.com/Dix1k)
+*   **Email**: Dix1k@yandex.ru
+*   **Telegram**: [@Dix1k](https://t.me/Dix1k)
 
 ---
 
-<div align="center"> <sub>© 2025 Власов Дмитрий | Учебный проект по веб-программированию</sub> <br> <a href="https://github.com/Dix1k/Web_programming">⬆️ Вернуться в корневой репозиторий</a> </div>
+⭐️ **Понравился проект? Поставьте звезду на GitHub — это поможет другим найти его!**
+
+<div align="center">
+  <br> <a href="https://github.com/Dix1k/Web_programming">⬆️ Вернуться в корневой репозиторий</a> 
+</div>
+
+*© 2026 Власов Дмитрий*
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=150&section=footer&text=Продолжайте%20кодить&fontSize=30&fontAlignY=70&animation=twinkling" width="100%" alt="Footer"/>
+</div>

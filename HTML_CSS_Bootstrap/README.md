@@ -7,51 +7,11 @@
   <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
 </div>
 
-
 ## 📋 Описание проекта
 
 Учебный проект по верстке адаптивных веб-страниц с использованием фреймворка Bootstrap. Проект демонстрирует навыки работы с сеткой Bootstrap, адаптивным дизайном и кастомными CSS стилями.
 
-**Дата создания:** Октябрь 2025  
 **Автор:** Власов Дмитрий (ПИНб-31)
-
-
-## ✨ Возможности проекта
-
-- ✅ Адаптивная верстка под все устройства (mobile, tablet, desktop)
-- ✅ Использование сетки Bootstrap (container, row, col)
-- ✅ Кастомные CSS стили поверх Bootstrap
-- ✅ Навигационное меню
-- ✅ Карточки товаров/информации
-- ✅ Формы обратной связи
-- ✅ Модальные окна
-
-
-## 🚀 Как запустить проект
-
-### Простой способ (рекомендуется)
-
-1. **Скачайте или клонируйте папку проекта:**
-   ```bash
-   git clone https://github.com/Dix1k/Web_programming.git
-   cd Web_programming/HTML_CSS_Bootstrap
-
-2. **Откройте файл index.html в любом современном браузере:**
-    - Двойным щелчком мыши
-    - Или через контекстное меню "Открыть с помощью"
-
-### Альтернативный способ (с локальным сервером)
-Если вы используете VS Code:
-- Установите расширение "Live Server"
-- Нажмите правой кнопкой мыши на index.html
-- Выберите "Open with Live Server"
-
-Или используйте Python:
-```bash
-python -m http.server 8000
-```
-- Затем откройте браузер по адресу: http://localhost:8000
-
 
 ## 📁 Структура проекта
 ```
@@ -79,7 +39,6 @@ HTML_CSS_Bootstrap/
 4. Понять принципы mobile-first подхода
 5. Создать готовый шаблон для дальнейшего использования
 
-
 ## 📚 Используемые технологии
 
 | Технология | Версия | Назначение |
@@ -89,10 +48,24 @@ HTML_CSS_Bootstrap/
 | **Bootstrap** | 5.x | Фреймворк для адаптивной верстки |
 | **JavaScript** | ES6 | Интерактивные элементы |
 
-
 ## 📞 Контакты
-*   **Автор:** Власов Дмитрий
-*   **Группа:** ПИНб-31
-*   **GitHub:** [Dix1k](https://github.com/Dix1k)
 
-<div align="center"> <sub>© 2025 Власов Дмитрий | Учебный проект по веб-программированию</sub> <br> <a href="https://github.com/Dix1k/Web_programming">⬆️ Вернуться в корневой репозиторий</a> </div>
+**Автор:** Власов Дмитрий  
+**Группа:** ПИНб-31
+*   **GitHub:** [Dix1k](https://github.com/Dix1k)
+*   **Email**: Dix1k@yandex.ru
+*   **Telegram**: [@Dix1k](https://t.me/Dix1k)
+
+---
+
+⭐️ **Понравился проект? Поставьте звезду на GitHub — это поможет другим найти его!**
+
+<div align="center">
+  <br> <a href="https://github.com/Dix1k/Web_programming">⬆️ Вернуться в корневой репозиторий</a> 
+</div>
+
+*© 2026 Власов Дмитрий*
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=150&section=footer&text=Продолжайте%20кодить&fontSize=30&fontAlignY=70&animation=twinkling" width="100%" alt="Footer"/>
+</div>

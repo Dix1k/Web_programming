@@ -8,15 +8,11 @@
   <img src="https://img.shields.io/badge/status-online--board%20v1b-green?style=for-the-badge" alt="Status">
 </div>
 
-
 ## 📋 Описание проекта
 
 Интерактивная онлайн-доска для создания заметок и организации задач. Проект позволяет пользователям создавать, редактировать, перемещать и удалять стикеры, имитируя функциональность досок типа Trello или Miro.
 
-**Дата создания:** 15 января 2026  
-**Версия:** v1b  
 **Автор:** Власов Дмитрий (ПИНб-31)
-
 
 ## ✨ Функциональность
 
@@ -28,7 +24,6 @@
 - ✅ Сохранение состояния в localStorage
 - ✅ Адаптивный дизайн
 - ✅ Поддержка touch-устройств
-
 
 ## 📁 Структура проекта
 ```
@@ -48,43 +43,24 @@ online-board/
 │   └── 📄 boards.json
 ```
 
-
-## 🚀 Как запустить проект
-
-### Быстрый запуск
-
-1. **Склонируйте репозиторий:**
-   ```bash
-   git clone https://github.com/Dix1k/Web_programming.git
-   cd Web_programming/online-board
-   ```
-
-2. **Откройте `index.html` в браузере:**
-   - Двойным щелчком мыши
-   - Или перетащите файл в окно браузера
-
-### Запуск с локальным сервером (рекомендуется)
-
-**VS Code Live Server:**
-```bash
-# Установите расширение "Live Server"
-# Нажмите правой кнопкой на index.html
-# Выберите "Open with Live Server"
-```
-
-**Python:**
-```bash
-python -m http.server 3000
-# Откройте http://localhost:3000
-```
-
-
 ## 📞 Контакты
 
-*   **Автор:** Власов Дмитрий  
-*   **Группа:** ПИНб-31  
+**Автор:** Власов Дмитрий  
+**Группа:** ПИНб-31
 *   **GitHub:** [Dix1k](https://github.com/Dix1k)
+*   **Email**: Dix1k@yandex.ru
+*   **Telegram**: [@Dix1k](https://t.me/Dix1k)
 
 ---
 
-<div align="center"> <sub>© 2026 Власов Дмитрий | Учебный проект по веб-программированию</sub> <br> <a href="https://github.com/Dix1k/Web_programming">⬆️ Вернуться в корневой репозиторий</a> </div>
+⭐️ **Понравился проект? Поставьте звезду на GitHub — это поможет другим найти его!**
+
+<div align="center">
+  <br> <a href="https://github.com/Dix1k/Web_programming">⬆️ Вернуться в корневой репозиторий</a> 
+</div>
+
+*© 2026 Власов Дмитрий*
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=150&section=footer&text=Продолжайте%20кодить&fontSize=30&fontAlignY=70&animation=twinkling" width="100%" alt="Footer"/>
+</div>
